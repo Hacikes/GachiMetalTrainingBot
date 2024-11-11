@@ -8,12 +8,12 @@ import org.springframework.context.annotation.PropertySource;
 import java.util.stream.Stream;
 @Configuration
 @PropertySource("application.properties")
-//@Data
+@Data
 public class BotConfig {
 
-    public String getBotName() {
-        return botName;
-    }
+//    public String getBotName() {
+//        return botName;
+//    }
 
     @Value("${bot.name}")
     String botName;

@@ -13,12 +13,9 @@ public class TelegramBot extends TelegramLongPollingBot {
 
     final BotConfig config;
 
-
-
     public TelegramBot(BotConfig config, @Value("${bot.token}") String botToken){
         super(botToken);
         this.config = config;
-
     }
 
 
@@ -27,11 +24,6 @@ public class TelegramBot extends TelegramLongPollingBot {
         return config.getBotName();
     }
 
-//     Проверить работу без него
-//    @Override
-//    public String getBotToken() {
-//        return config.getToken();
-//    }
 
     @Override
     public void onUpdateReceived(Update update) {
