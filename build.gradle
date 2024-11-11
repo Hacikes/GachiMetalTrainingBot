@@ -19,6 +19,7 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 	// https://mvnrepository.com/artifact/org.telegram/telegrambots
@@ -44,4 +45,16 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+// Настройка bootJar
+bootJar {
+	archiveBaseName.set('GachiMetalTrainingBot')
+	archiveVersion.set('1.0.0')
+}
+
+// Настройка обычного JAR
+jar {
+	archiveBaseName.set('GachiMetalTrainingBot')
+	archiveVersion.set('1.0.0')
 }

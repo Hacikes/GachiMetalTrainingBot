@@ -27,7 +27,7 @@ public class BotInitializer {
             log.info("Bot started!");
         }
         catch (TelegramApiException e){
-            log.error("Initializer Error. Error occured: " + e.getMessage());
+            log.error("Initializer Error. Error occurred: {}", e.getMessage());
         }
     }
 }

@@ -11,10 +11,6 @@ import java.util.stream.Stream;
 @Data
 public class BotConfig {
 
-//    public String getBotName() {
-//        return botName;
-//    }
-
     @Value("${bot.name}")
     String botName;
 
